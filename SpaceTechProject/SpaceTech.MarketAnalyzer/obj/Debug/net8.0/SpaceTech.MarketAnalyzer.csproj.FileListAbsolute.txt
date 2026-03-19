@@ -1,0 +1,15 @@
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/bin/Debug/net8.0/SpaceTech.MarketAnalyzer
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/bin/Debug/net8.0/SpaceTech.MarketAnalyzer.deps.json
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/bin/Debug/net8.0/SpaceTech.MarketAnalyzer.runtimeconfig.json
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/bin/Debug/net8.0/SpaceTech.MarketAnalyzer.dll
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/bin/Debug/net8.0/SpaceTech.MarketAnalyzer.pdb
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/obj/Debug/net8.0/SpaceTech.MarketAnalyzer.GeneratedMSBuildEditorConfig.editorconfig
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/obj/Debug/net8.0/SpaceTech.MarketAnalyzer.AssemblyInfoInputs.cache
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/obj/Debug/net8.0/SpaceTech.MarketAnalyzer.AssemblyInfo.cs
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/obj/Debug/net8.0/SpaceTech.MarketAnalyzer.csproj.CoreCompileInputs.cache
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/obj/Debug/net8.0/SpaceTech.MarketAnalyzer.sourcelink.json
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/obj/Debug/net8.0/SpaceTech.MarketAnalyzer.dll
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/obj/Debug/net8.0/refint/SpaceTech.MarketAnalyzer.dll
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/obj/Debug/net8.0/SpaceTech.MarketAnalyzer.pdb
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/obj/Debug/net8.0/SpaceTech.MarketAnalyzer.genruntimeconfig.cache
+/home/guillermo79/SpaceTechProject/SpaceTech.MarketAnalyzer/obj/Debug/net8.0/ref/SpaceTech.MarketAnalyzer.dll

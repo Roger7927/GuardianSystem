@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Analytics | Monitor de Mercado Elite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* (c) 2026 Roger Hernandez - ADS */
+        :root {
+            --neon-blue: #00f2ff;
+            --neon-purple: #bd00ff;
+            --neon-green: #00ff88;
+            --deep-black: #010103;
+        }
+
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%;
+            background-color: var(--deep-black);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden; display: flex;
+            justify-content: center; align-items: flex-start;
+            padding: 40px 0;
+        }
+
+        #three-container { position: fixed; top: 0; left: 0; z-index: 1; width: 100%; height: 100%; }
+
+        .ui-overlay {
+            position: relative; z-index: 10; width: 95%; max-width: 1300px;
+            display: flex; justify-content: center; align-items: center;
+        }
+
+        .tactical-core {
+            background: rgba(10, 10, 25, 0.75);
+            backdrop-filter: blur(35px) saturate(180%);
+            border: 1px solid rgba(0, 242, 255, 0.3);
+            border-radius: 40px; padding: 40px;
+            width: 100%;
+            box-shadow: 0 0 100px rgba(0,0,0,0.9);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem; letter-spacing: 12px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px var(--neon-blue)); margin-bottom: 40px;
+            text-transform: uppercase; font-weight: 800;
+        }
+
+        /* GRID RESPONSIVO (ADS Logic: Mobile First) */
+        .showcase { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+            gap: 25px; 
+            margin-bottom: 30px;
+        }
+
+        .unit-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px; padding: 25px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex; flex-direction: column; align-items: center;
+            cursor: pointer;
+        }
+
+        .unit-card:hover {
+            border-color: var(--neon-blue);
+            transform: translateY(-10px);
+            background: rgba(0, 242, 255, 0.05);
+            box-shadow: 0 15px 45px rgba(0, 242, 255, 0.2);
+        }
+
+        .img-container {
+            width: 100%; height: 220px;
+            display: flex; justify-content: center; align-items: center;
+            margin-bottom: 15px;
+            background: radial-gradient(circle, rgba(0, 242, 255, 0.08) 0%, transparent 70%);
+            border-radius: 15px;
+        }
+
+        .product-img {
+            max-height: 190px; max-width: 90%;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.6));
+            transition: 0.5s;
+        }
+
+        .unit-card:hover .product-img {
+            filter: drop-shadow(0 20px 40px var(--neon-blue));
+            transform: scale(1.1);
+        }
+
+        .badge {
+            background: var(--neon-green); color: #000;
+            font-size: 0.6rem; font-weight: 900; padding: 4px 10px;
+            border-radius: 50px; margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .unit-id { color: #666; font-size: 0.65rem; font-weight: bold; margin-bottom: 5px; }
+        h3 { color: #fff; font-size: 1.1rem; margin: 0; font-weight: 700; text-transform: uppercase; }
+        .price { font-size: 2.2rem; color: #fff; font-weight: 800; margin: 15px 0; }
+        .price span { font-size: 1rem; opacity: 0.7; margin-right: 5px; }
+
+        button {
+            background: transparent; border: 2px solid var(--neon-blue);
+            color: var(--neon-blue); padding: 14px 20px; border-radius: 10px;
+            cursor: pointer; font-weight: 700; text-transform: uppercase;
+            font-size: 0.8rem; transition: 0.3s; width: 100%;
+            letter-spacing: 1px;
+        }
+
+        .unit-card:hover button { background: var(--neon-blue); color: #000; }
+
+        .footer-verify {
+            margin-top: 30px; padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #555; font-size: 0.7rem; letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .verify-badge { color: var(--neon-green); font-weight: 800; margin-left: 5px; }
+
+        @media (max-width: 600px) { h1 { font-size: 1.8rem; letter-spacing: 6px; } }
+    </style>
+</head>
+<body>
+    <div id="three-container"></div>
+
+    <div class="ui-overlay">
+        <div class="tactical-core">
+            <h1>TECH ANALYTICS</h1>
+            
+            <div class="showcase">
+                <div class="unit-card" onclick="window.open('https://amzn.to/4uBoZMz', '_blank')">
+                    <div class="badge">Cupom Ativo</div>
+                    <div class="unit-id">[ ANALYSE: S26-U ]</div>
+                    <div class="img-container"><img src="assets/s26.png" class="product-img"></div>
+                    <h3>SAMSUNG S26 ULTRA</h3>
+                    <div class="price"><span>R$</span> 11.499</div>
+                    <button>ADQUIRIR UNIDADE</button>
+                </div>
+
+                <div class="unit-card" onclick="window.open('https://amzn.to/4lxFPI0', '_blank')">
+                    <div class="badge">Frete Grátis</div>
+                    <div class="unit-id">[ ANALYSE: IP17-P ]</div>
+                    <div class="img-container"><img src="assets/iphone17.png" class="product-img"></div>
+                    <h3>IPHONE 17 PRO MAX</h3>
+                    <div class="price"><span>R$</span> 10.124</div>
+                    <button>ADQUIRIR UNIDADE</button>
+                </div>
+
+                <div class="unit-card" onclick="window.open('https://amzn.to/3PLEEJ6', '_blank')">
+                    <div class="badge">ELETRO500</div>
+                    <div class="unit-id">[ ANALYSE: S25-U ]</div>
+                    <div class="img-container"><img src="assets/s25.png" class="product-img"></div>
+                    <h3>SAMSUNG S25 ULTRA</h3>
+                    <div class="price"><span>R$</span> 6.595</div>
+                    <button>ADQUIRIR UNIDADE</button>
+                </div>
+
+                <div class="unit-card" onclick="window.open('https://amzn.to/41clhLN', '_blank')">
+                    <div class="badge">Titânio Deserto</div>
+                    <div class="unit-id">[ ANALYSE: IP16-P ]</div>
+                    <div class="img-container"><img src="assets/iphone16.png" class="product-img"></div>
+                    <h3>IPHONE 16 PRO MAX</h3>
+                    <div class="price"><span>R$</span> 12.499</div>
+                    <button>ADQUIRIR UNIDADE</button>
+                </div>
+            </div>
+
+            <div class="footer-verify">
+                © 2026 Roger Hernandez | ADS <span class="verify-badge">● SISTEMA VERIFICADO</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        function createCircleTexture() {
+            const canvas = document.createElement('canvas'); canvas.width = 64; canvas.height = 64;
+            const ctx = canvas.getContext('2d');
+            const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+            gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+            gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+            ctx.fillStyle = gradient; ctx.fillRect(0, 0, 64, 64);
+            return new THREE.CanvasTexture(canvas);
+        }
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setClearColor(0x010103, 1); renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('three-container').appendChild(renderer.domElement);
+        const starsGeometry = new THREE.BufferGeometry();
+        const starsVertices = [];
+        for (let i = 0; i < 10000; i++) { starsVertices.push(Math.random()*2000-1000, Math.random()*2000-1000, Math.random()*2000-1000); }
+        starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starsVertices, 3));
+        const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 2.2, map: createCircleTexture(), transparent: true, opacity: 1, depthWrite: false, blending: THREE.AdditiveBlending });
+        const stars = new THREE.Points(starsGeometry, starsMaterial); scene.add(stars);
+        const pLight = new THREE.PointLight(0xbd00ff, 4, 700); pLight.position.set(250, 150, 150); scene.add(pLight);
+        const bLight = new THREE.PointLight(0x00f2ff, 4, 700); bLight.position.set(-250, -150, 150); scene.add(bLight);
+        scene.fog = new THREE.FogExp2(0x010103, 0.002);
+        camera.position.z = 5;
+        function animate() { requestAnimationFrame(animate); stars.rotation.y += 0.0004; stars.rotation.x += 0.0001; const time = Date.now() * 0.0005; pLight.position.x = Math.sin(time) * 300; bLight.position.y = Math.cos(time) * 300; renderer.render(scene, camera); }
+        window.addEventListener('resize', () => { camera.aspect = window.innerWidth / window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth, window.innerHeight); }); animate();
+    </script>
+</body>
+</html>
