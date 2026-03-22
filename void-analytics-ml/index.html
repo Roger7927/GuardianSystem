@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOID ANALYTICS | MONITOR DE MERCADO</title>
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #00e5ff;
+            --highlight: #ff00ff;
+            --text-main: #ffffff;
+            --glass: rgba(17, 17, 17, 0.85);
+        }
+
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg); margin: 0; color: var(--text-main); font-family: 'Segoe UI', Tahoma, sans-serif; overflow-x: hidden; }
+
+        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 1; pointer-events: none; }
+
+        header { 
+            position: relative; z-index: 10; height: 50vh; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; 
+        }
+
+        h1 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.6em; color: var(--accent); text-shadow: 0 0 10px var(--accent); margin-bottom: 5px; }
+        .logo { font-size: 5rem; font-weight: 900; background: linear-gradient(180deg, #fff 40%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; position: relative; }
+
+        .logo::after { 
+            content: 'COSMIC'; position: absolute; bottom: -15px; right: -35px; font-size: 1.2rem; color: var(--highlight);
+            text-shadow: 0 0 15px var(--highlight); letter-spacing: 8px; font-weight: 900;
+        }
+
+        main { position: relative; z-index: 20; padding: 20px; max-width: 1700px; margin: 0 auto; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; padding-bottom: 50px; }
+
+        .product-card { 
+            background: var(--glass); border: 1px solid rgba(0, 229, 255, 0.15); border-radius: 28px; 
+            backdrop-filter: blur(12px); padding: 25px; transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; 
+        }
+        .product-card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 10px 40px rgba(0, 229, 255, 0.2); }
+
+        .img-box { background: #fff; border-radius: 18px; height: 200px; display: flex; align-items: center; justify-content: center; padding: 15px; margin-bottom: 20px; }
+        .img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+        .tag-accent { font-size: 0.7rem; color: var(--accent); font-weight: 800; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 1px; }
+        h2 { font-size: 1.2rem; margin: 0 0 12px 0; font-weight: 900; color: #fff; text-transform: uppercase; min-height: 3rem; }
+        p { font-size: 0.85rem; color: #aaa; height: 3.5rem; overflow: hidden; margin-bottom: 20px; line-height: 1.5; }
+        
+        .price { font-size: 1.8rem; font-weight: 900; color: #fff; text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); margin-bottom: 20px; }
+        .discount-tag { font-size: 0.8rem; color: #00ff88; font-weight: 700; margin-left: 10px; }
+
+        .btn-buy { 
+            text-transform: uppercase; font-weight: 700; background: #fff; color: #050505; 
+            padding: 15px; border-radius: 12px; text-decoration: none; text-align: center; font-size: 0.85rem; transition: 0.3s;
+        }
+        .btn-buy:hover { background: var(--accent); color: #000; box-shadow: 0 0 20px var(--accent); }
+
+        footer { 
+            position: relative; z-index: 20; padding: 80px 20px; 
+            background: linear-gradient(180deg, transparent, rgba(0, 229, 255, 0.03));
+            border-top: 1px solid rgba(0, 229, 255, 0.1); 
+            margin-top: 100px; text-align: center;
+        }
+
+        .owner-name { font-size: 2.5rem; font-weight: 900; color: #fff; letter-spacing: 5px; text-transform: uppercase; margin: 10px 0; text-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
+        .tag-legal { font-size: 0.8rem; color: #666; font-weight: 700; letter-spacing: 1px; }
+        .tag-highlight { font-size: 0.8rem; color: var(--highlight); font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+        .tag-affiliate { font-size: 0.75rem; color: var(--accent); font-weight: 800; border: 1px solid var(--accent); padding: 5px 15px; border-radius: 50px; display: inline-block; margin-bottom: 15px; }
+        .footer-disclaimer p { font-size: 0.85rem; color: #888; max-width: 700px; margin: 15px auto 0; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <h1>Roger Hernandez Presents</h1>
+        <div class="logo">VOID</div>
+    </header>
+
+    <main>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="img-box"><img src="img/monitor.png" alt="Monitor LG"></div>
+                <span class="tag-accent">🖥️ SETUP DE ELITE</span>
+                <h2>LG ULTRAGEAR 27'' IPS</h2>
+                <p>Performance máxima 144Hz para o sistema Void Analytics.</p>
+                <div class="price">R$ 983,48</div>
+                <a href="https://meli.la/1FUX8t8" class="btn-buy" target="_blank">🛒 ADQUIRIR AGORA</a>
+            </div>
+
+            <div class="product-card">
+                <div class="img-box"><img src="img/teclado.png" alt="Logitech G PRO"></div>
+                <span class="tag-accent">🎹 ENTRADA TECH</span>
+                <h2>LOGITECH G PRO TKL</h2>
+                <p>Switches GX Blue Clicky e design compacto para eficiência.</p>
+                <div class="price">R$ 450,00 <span class="discount-tag">38% OFF</span></div>
+                <a href="https://meli.la/33mS8Jv" class="btn-buy" target="_blank">🛒 ADQUIRIR AGORA</a>
+            </div>
+
+            <div class="product-card">
+                <div class="img-box"><img src="img/fone.png" alt="Sony XM5"></div>
+                <span class="tag-accent">🎧 FOCO TOTAL</span>
+                <h2>SONY WH-1000XM5</h2>
+                <p>O melhor cancelamento de ruído para o seu Deep Work.</p>
+                <div class="price">R$ 2.097,00</div>
+                <a href="https://meli.la/15e2njM" class="btn-buy" target="_blank">🛒 ADQUIRIR AGORA</a>
+            </div>
+
+            <div class="product-card">
+                <div class="img-box"><img src="img/mouse.png" alt="Superlight 2"></div>
+                <span class="tag-accent">🖱️ PRECISÃO ABSOLUTA</span>
+                <h2>LOGITECH SUPERLIGHT 2</h2>
+                <p>Navegação de alta velocidade e leveza extrema.</p>
+                <div class="price">R$ 749,90 <span class="discount-tag">25% OFF</span></div>
+                <a href="https://meli.la/2z7E8Zn" class="btn-buy" target="_blank">🛒 ADQUIRIR AGORA</a>
+            </div>
+
+            <div class="product-card">
+                <div class="img-box"><img src="img/microfone.png" alt="Shure MV7+"></div>
+                <span class="tag-accent">🎙️ ÁUDIO PROFISSIONAL</span>
+                <h2>SHURE MV7+ PODCAST</h2>
+                <p>Áudio de estúdio para comunicações de alta fidelidade.</p>
+                <div class="price">R$ 2.995,00</div>
+                <a href="https://meli.la/2BdPaSA" class="btn-buy" target="_blank">🛒 ADQUIRIR AGORA</a>
+            </div>
+
+            <div class="product-card">
+                <div class="img-box"><img src="img/cadeira.png" alt="Herman Miller Setu"></div>
+                <span class="tag-accent">💺 ERGONOMIA ELITE</span>
+                <h2>HERMAN MILLER SETU</h2>
+                <p>Infraestrutura humana para performance ininterrupta.</p>
+                <div class="price">R$ 3.976,00 <span class="discount-tag">33% OFF</span></div>
+                <a href="https://meli.la/2SeptiX" class="btn-buy" target="_blank">🛒 ADQUIRIR AGORA</a>
+            </div>
+
+            <div class="product-card">
+                <div class="img-box"><img src="img/iphone.png" alt="iPhone 15 PM"></div>
+                <span class="tag-accent">📱 MOBILE DE PONTA</span>
+                <h2>IPHONE 15 PRO MAX</h2>
+                <p>O auge da tecnologia móvel proprietária 256GB.</p>
+                <div class="price">R$ 6.299,00</div>
+                <a href="https://meli.la/235TgXu" class="btn-buy" target="_blank">🛒 ADQUIRIR AGORA</a>
+            </div>
+
+            <div class="product-card">
+                <div class="img-box"><img src="img/kindle.png" alt="Kindle 2024"></div>
+                <span class="tag-accent">📚 DOCUMENTAÇÃO</span>
+                <h2>KINDLE PAPERWHITE 2024</h2>
+                <p>Biblioteca portátil definitiva para leitura técnica.</p>
+                <div class="price">R$ 897,00</div>
+                <a href="https://meli.la/248wx41" class="btn-buy" target="_blank">🛒 ADQUIRIR AGORA</a>
+            </div>
+
+            <div class="product-card">
+                <div class="img-box"><img src="img/alexa.png" alt="Echo Pop"></div>
+                <span class="tag-accent">🏠 AUTOMAÇÃO</span>
+                <h2>AMAZON ECHO POP</h2>
+                <p>Controle por voz e automação inteligente de ambiente.</p>
+                <div class="price">R$ 292,98</div>
+                <a href="https://meli.la/25u3fEL" class="btn-buy" target="_blank">🛒 ADQUIRIR AGORA</a>
+            </div>
+
+            <div class="product-card">
+                <div class="img-box"><img src="img/lampada.png" alt="Lampada Smart"></div>
+                <span class="tag-accent">💡 AMBIENTE NEON</span>
+                <h2>LÂMPADA SMART 20W</h2>
+                <p>Potência máxima RGB para imersão total no setup.</p>
+                <div class="price">R$ 59,90 <span class="discount-tag">44% OFF</span></div>
+                <a href="https://meli.la/215nRew" class="btn-buy" target="_blank">🛒 ADQUIRIR AGORA</a>
+            </div>
+
+            <div class="product-card">
+                <div class="img-box"><img src="img/ps5.png" alt="PS5 Slim"></div>
+                <span class="tag-accent">🎮 PERFORMANCE GAMER</span>
+                <h2>PLAYSTATION 5 SLIM</h2>
+                <p>Bundle com 2 Jogos: Astro Bot e Gran Turismo 7.</p>
+                <div class="price">R$ 3.430,00 <span class="discount-tag">14% OFF</span></div>
+                <a href="https://meli.la/29SYdDj" class="btn-buy" target="_blank">🛒 ADQUIRIR AGORA</a>
+            </div>
+
+            <div class="product-card">
+                <div class="img-box"><img src="img/ssd.png" alt="SSD Samsung"></div>
+                <span class="tag-accent">💾 SEGURANÇA DE DADOS</span>
+                <h2>SAMSUNG T7 SHIELD 2TB</h2>
+                <p>Armazenamento blindado de alta velocidade USB 3.2.</p>
+                <div class="price">R$ 2.698,00</div>
+                <a href="https://meli.la/2RBE42T" class="btn-buy" target="_blank">🛒 ADQUIRIR AGORA</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <span class="tag-accent">PROPRIETÁRIO DO SISTEMA</span>
+            <h2 class="owner-name">ROGER HERNANDEZ</h2>
+            <div class="footer-legal">
+                <span class="tag-legal">COPYRIGHT © 2026 | STATUS:</span>
+                <span class="tag-highlight">TODOS OS DIREITOS RESERVADOS</span>
+            </div>
+            <div class="footer-disclaimer">
+                <span class="tag-affiliate">📢 PROGRAMA DE ASSOCIADOS</span>
+                <p>O Void Analytics é remunerado por compras qualificadas via links de afiliado do Mercado Livre.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#00e5ff" },
+                "opacity": { "value": 0.4, "random": true },
+                "size": { "value": 2.5, "random": true },
+                "line_linked": { "enabled": true, "distance": 130, "color": "#00e5ff", "opacity": 0.3 },
+                "move": { "enabled": true, "speed": 1.2, "direction": "top", "out_mode": "out" }
+            }
+        });
+    </script>
+</body>
+</html>

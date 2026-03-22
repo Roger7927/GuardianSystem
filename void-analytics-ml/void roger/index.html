@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOID ANALYTICS | MONITOR DE MERCADO</title>
+    <style>
+        :root {
+            --bg: #050505;
+            --accent: #00e5ff;
+            --highlight: #ff00ff;
+            --text-main: #ffffff;
+            --glass: rgba(10, 10, 10, 0.95);
+        }
+
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--bg); margin: 0; color: var(--text-main); font-family: 'Segoe UI', sans-serif; overflow-x: hidden; }
+
+        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 1; }
+
+        header { 
+            position: relative; z-index: 10; height: 60vh; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; 
+        }
+
+        h1 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.6em; color: var(--accent); text-shadow: 0 0 10px var(--accent); margin-bottom: 5px; }
+        .logo { font-size: 5rem; font-weight: 900; background: linear-gradient(180deg, #fff 40%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; position: relative; filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.4)); }
+        .logo::after { content: 'ANALYTICS'; position: absolute; bottom: -5px; right: -50px; font-size: 1.2rem; color: var(--highlight); text-shadow: 0 0 10px var(--highlight); letter-spacing: 6px; font-weight: 300; }
+
+        main { position: relative; z-index: 20; padding: 10px; max-width: 1600px; margin: 0 auto; }
+        
+        /* REGRA DE OURO: 4 COLUNAS FIXAS NO NOTEBOOK */
+        .product-grid { 
+            display: grid; grid-template-columns: repeat(4, 1fr); 
+            gap: 20px; padding-bottom: 50px; 
+        }
+
+        @media (max-width: 1200px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
+
+        .product-card { 
+            background: var(--glass); border: 1px solid rgba(0, 229, 255, 0.15); border-radius: 18px; 
+            backdrop-filter: blur(20px); padding: 15px; transition: 0.4s ease; display: flex; flex-direction: column; 
+        }
+        .product-card:hover { transform: translateY(-10px); border-color: var(--accent); }
+
+        .img-box { background: #fff; border-radius: 12px; height: 180px; display: flex; align-items: center; justify-content: center; padding: 10px; margin-bottom: 10px; }
+        .img-box img { max-width: 95%; max-height: 95%; object-fit: contain; }
+
+        h2 { font-size: 1rem; margin: 5px 0; font-weight: 700; color: var(--accent); }
+        p { font-size: 0.85rem; color: #eee; height: 40px; overflow: hidden; margin-bottom: 10px; }
+        .price { font-size: 1.4rem; font-weight: 900; color: #fff; margin-bottom: 10px; text-shadow: 0 0 10px var(--highlight); }
+
+        .btn-buy { 
+            text-transform: uppercase; font-weight: 900; background: #fff; color: var(--bg); 
+            padding: 10px; border-radius: 8px; text-decoration: none; text-align: center; font-size: 0.75rem; 
+        }
+        .btn-buy:hover { background: var(--accent); }
+
+        /* RODAPÉ BLINDADO (COMPLIANCE ASSOCIADOS) */
+        footer { 
+            position: relative; z-index: 20; text-align: center; padding: 60px 20px; 
+            font-size: 0.75rem; color: #888; border-top: 1px solid rgba(102, 102, 102, 0.2); margin-top: 40px; 
+        }
+        .disclaimer { color: var(--accent); font-weight: 600; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <h1>Roger Hernandez Presents</h1>
+        <div class="logo">VOID</div>
+    </header>
+
+    <main>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="img-box"><img src="https://http2.mlstatic.com/D_NQ_NP_634453-MLA46114400552_052021-O.webp"></div>
+                <h2>SETUP DE ELITE</h2><p>🚀 Performance máxima para sistemas complexos.</p><span class="price">R$ 1.250,00</span><a href="#" class="btn-buy">👉 VER OFERTA SECRETA</a>
+            </div>
+            <div class="product-card">
+                <div class="img-box"><img src="https://http2.mlstatic.com/D_NQ_NP_967396-MLA48197711234_112021-O.webp"></div>
+                <h2>PRECISÃO TECH</h2><p>🎹 Digitação rápida e sem erros para projetos pesados.</p><span class="price">R$ 349,90</span><a href="#" class="btn-buy">👉 GARANTIR ACESSO</a>
+            </div>
+            <div class="product-card">
+                <div class="img-box"><img src="https://http2.mlstatic.com/D_NQ_NP_727931-MLA48483864402_122021-O.webp"></div>
+                <h2>FOCO ABSOLUTO</h2><p>🎧 Bloqueie distrações e entre no modo Deep Work.</p><span class="price">R$ 1.950,00</span><a href="#" class="btn-buy">👉 ADQUIRIR SILÊNCIO</a>
+            </div>
+            <div class="product-card">
+                <div class="img-box"><img src="https://http2.mlstatic.com/D_NQ_NP_615215-MLA44353456345_122020-O.webp"></div>
+                <h2>PRESENÇA CYBER</h2><p>✨ A fragrância que define autoridade em nível Arraso.</p><span class="price">R$ 849,00</span><a href="#" class="btn-buy">👉 TER PRESENÇA</a>
+            </div>
+            <div class="product-card">
+                <div class="img-box"><img src="https://http2.mlstatic.com/D_NQ_NP_840748-MLA45112112345_032021-O.webp"></div>
+                <h2>CHEIRO DE SUCESSO</h2><p>🏆 O troféu de quem domina o mercado e o código.</p><span class="price">R$ 599,00</span><a href="#" class="btn-buy">👉 VENCER AGORA</a>
+            </div>
+            <div class="product-card">
+                <div class="img-box"><img src="https://http2.mlstatic.com/D_NQ_NP_921345-MLA44221122334_122020-O.webp"></div>
+                <h2>ESTILO ADS</h2><p>👗 Sofisticação técnica para o seu dia a dia profissional.</p><span class="price">R$ 649,00</span><a href="#" class="btn-buy">👉 TER ESTILO</a>
+            </div>
+            <div class="product-card">
+                <div class="img-box"><img src="https://http2.mlstatic.com/D_NQ_NP_665045-MLA46138661644_052021-O.webp"></div>
+                <h2>PODER NO PULSO</h2><p>⌚ Monitoramento de produtividade tech 24/7.</p><span class="price">R$ 2.899,00</span><a href="#" class="btn-buy">👉 VER DETALHES</a>
+            </div>
+            <div class="product-card">
+                <div class="img-box"><img src="https://http2.mlstatic.com/D_NQ_NP_889345-MLA44332211445_012021-O.webp"></div>
+                <h2>DOMÍNIO TECH</h2><p>📱 O auge do processamento mobile na sua mão.</p><span class="price">R$ 6.199,00</span><a href="#" class="btn-buy">👉 GARANTIR O MEU</a>
+            </div>
+            <div class="product-card">
+                <div class="img-box"><img src="https://http2.mlstatic.com/D_NQ_NP_776123-MLA45678912345_062021-O.webp"></div>
+                <h2>CONHECIMENTO FLASH</h2><p>📖 Sua biblioteca técnica completa e portátil.</p><span class="price">R$ 799,00</span><a href="#" class="btn-buy">👉 LER MAIS RÁPIDO</a>
+            </div>
+            <div class="product-card">
+                <div class="img-box"><img src="https://http2.mlstatic.com/D_NQ_NP_998123-MLA46789012345_072021-O.webp"></div>
+                <h2>COMANDO VOID</h2><p>🗣️ Automação inteligente que obedece à sua lógica.</p><span class="price">R$ 249,00</span><a href="#" class="btn-buy">👉 CONTROLAR AMBIENTE</a>
+            </div>
+            <div class="product-card">
+                <div class="img-box"><img src="https://http2.mlstatic.com/D_NQ_NP_554123-MLA48877665544_112021-O.webp"></div>
+                <h2>IMERSÃO NEON</h2><p>💡 Iluminação de elite para o seu ambiente tech.</p><span class="price">R$ 79,90</span><a href="#" class="btn-buy">👉 COLORIR TUDO</a>
+            </div>
+            <div class="product-card">
+                <div class="img-box"><img src="https://http2.mlstatic.com/D_NQ_NP_112345-MLA49988776655_122021-O.webp"></div>
+                <h2>PODER GAMER</h2><p>🎮 O auge dos games em um hardware de elite.</p><span class="price">R$ 3.799,00</span><a href="#" class="btn-buy">👉 JOGAR AGORA</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="disclaimer">📢 PROGRAMA DE ASSOCIADOS</div>
+        <p>Como participante do Programa de Associados do Mercado Livre, sou remunerado por compras qualificadas efetuadas através desta plataforma.</p>
+        <p>Copyright: (c) 2026 Roger Hernandez - ADS. Todos os Direitos Reservados.</p>
+        <p>Aviso: Preços e disponibilidade sujeitos a alterações pelo fornecedor oficial.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 80 },
+                "color": { "value": "#00e5ff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.3 },
+                "size": { "value": 2 },
+                "line_linked": { "enabled": true, "distance": 150, "color": "#00e5ff", "opacity": 0.4 },
+                "move": { "enabled": true, "speed": 1.5, "direction": "top", "out_mode": "out" }
+            }
+        });
+    </script>
+</body>
+</html>
